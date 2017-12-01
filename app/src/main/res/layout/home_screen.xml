@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="16dp">
+
+
+        <TextView
+            android:id="@+id/title"
+
+            android:layout_width="347dp"
+            android:layout_height="109dp"
+            android:layout_marginTop="16dp"
+            android:text="Pathways Meetup ETSU"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="19dp" />
+
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="142dp"
+            android:layout_height="wrap_content"
+            android:text="Messages"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="119dp" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Friend Requests"
+            tools:layout_editor_absoluteX="120dp"
+            tools:layout_editor_absoluteY="167dp" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter schedule"
+            tools:layout_editor_absoluteX="123dp"
+            tools:layout_editor_absoluteY="215dp" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="144dp"
+            android:layout_height="wrap_content"
+            android:text="Other"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="263dp" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

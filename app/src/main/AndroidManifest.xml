@@ -19,7 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DisplayHome"></activity>
+        <activity android:name=".DisplayHome" />
+        <activity android:name=".DisplayMessage" />
+        <activity android:name=".DisplayCreateSchedule" />
+        <activity android:name=".DisplayAddFriend" />
+        <activity android:name=".DisplayMore"></activity>
     </application>
 
 </manifest>

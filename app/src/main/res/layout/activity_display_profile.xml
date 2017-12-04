@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.pme.sse.pme.DisplayMessage">
+    tools:context="com.pme.sse.pme.DisplayProfile">
 
 </android.support.constraint.ConstraintLayout>

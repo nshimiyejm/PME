@@ -15,4 +15,5 @@
     <string name="log_in">Log In</string>
     <string name="enter_password">Enter Password</string>
     <string name="enter_email">Enter Email</string>
+    <string name="title_activity_display_walking_r">Map</string>
 </resources>

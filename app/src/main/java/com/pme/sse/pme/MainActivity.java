@@ -10,7 +10,11 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+
 import android.widget.EditText;
+
+import android.widget.ImageButton;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     Button registerbtn, login;
@@ -23,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
 
@@ -33,6 +38,60 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         registerbtn.setOnClickListener(this);
 
         studentLocalStorage = new StudentLocalStorage(this);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        final Button login = findViewById(R.id.login);
+        login.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                setContentView(R.layout.home_screen);
+
+                final Button friend_requests = findViewById(R.id.friend_requests);
+                friend_requests.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        setContentView(R.layout.accept_friend_requests);
+
+                        final Button back_1 = findViewById(R.id.back_btn_frnd_rqt);
+                        back_1.setOnClickListener(new View.OnClickListener() {
+                            public void onClick(View v) {
+                                setContentView(R.layout.home_screen);
+
+                            }
+                        });
+                    }
+                });
+                final Button send_msg = findViewById(R.id.messages);
+                send_msg.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+
+                        setContentView(R.layout.send_text);
+                    }
+                });
+                final Button schedule = findViewById(R.id.enter_schedule);
+                schedule.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        setContentView(R.layout.schedule);
+
+                    }
+                });
+                final Button my_profile = findViewById(R.id.my_profile);
+                my_profile.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+
+                        setContentView(R.layout.profile_screen);
+                    }
+                });
+            }
+        });
+
+        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });*/
 
     }
 

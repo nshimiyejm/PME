@@ -6,94 +6,85 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="33dp"
-        android:layout_marginBottom="13dp"
-        android:layout_marginEnd="4dp"
-        android:text="Decline"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox3"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="13dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="4dp"
-        android:checked="false"
-        android:text="Accept"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox4"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox"
-        app:layout_constraintStart_toEndOf="@+id/editText9" />
-
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="392dp"
-        android:layout_marginEnd="4dp"
-        android:text="Decline"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="392dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="4dp"
-        android:text="Accept"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox3"
-        app:layout_constraintStart_toEndOf="@+id/editText10" />
-
-    <EditText
-        android:id="@+id/editText9"
-        android:layout_width="214dp"
-        android:layout_height="38dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="35dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Jane Doe wants to be your friend.."
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/editText10"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editText10"
-        android:layout_width="215dp"
-        android:layout_height="36dp"
-        android:layout_marginBottom="147dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Ida May wants to be your friend.."
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText9" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="232dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginStart="148dp"
-        android:text="Back"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <EditText
+            android:id="@+id/editText9"
+            android:layout_width="286dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="220dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="John Doe wants to be your friend.."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="136dp"
+            android:layout_marginStart="136dp"
+            app:layout_constraintBottom_toTopOf="@+id/editText9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/profile_icon" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/profile_circle_imageview" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="168dp"
+            android:layout_marginEnd="136dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@android:drawable/ic_delete" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="168dp"
+            android:layout_marginStart="136dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@android:drawable/ic_input_add" />
+
+        <TextView
+            android:id="@+id/title_frnd_rqsts"
+            android:layout_width="291dp"
+            android:layout_height="69dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Friend Requests"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/imageView9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>

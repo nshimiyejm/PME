@@ -22,12 +22,18 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 setContentView(R.layout.home_screen);
-
-                final Button button = findViewById(R.id.friend_requests);
-                button.setOnClickListener(new View.OnClickListener() {
+                final Button friend_requests = findViewById(R.id.friend_requests);
+                friend_requests.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
 
                         setContentView(R.layout.accept_friend_requests);
+                    }
+                });
+                final Button my_profile = findViewById(R.id.my_profile);
+                my_profile.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+
+                        setContentView(R.layout.profile_screen);
                     }
                 });
             }

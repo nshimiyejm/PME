@@ -1,66 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="16dp">
+    <TextView
+        android:id="@+id/title"
+
+        android:layout_width="347dp"
+        android:layout_height="109dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="16dp"
+        android:text="Pathways Meetup ETSU"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/friend_requests"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="60dp"
+        android:text="Friend Requests"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
 
-        <TextView
-            android:id="@+id/title"
+    <Button
+        android:id="@+id/my_profile"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="112dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginStart="121dp"
+        android:text="My Profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/guideline" />
 
-            android:layout_width="347dp"
-            android:layout_height="109dp"
-            android:layout_marginTop="16dp"
-            android:text="Pathways Meetup ETSU"
-            android:textAlignment="center"
-            android:textSize="36sp"
-            android:textStyle="bold"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="19dp" />
+    <Button
+        android:id="@+id/enter_schedule"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="121dp"
+        android:layout_marginStart="121dp"
+        android:text="Enter schedule"
+        app:layout_constraintBottom_toTopOf="@+id/my_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/messages"
+        app:layout_constraintVertical_bias="1.0" />
 
+    <Button
+        android:id="@+id/messages"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="121dp"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="12dp"
+        android:text="Messages"
+        app:layout_constraintBottom_toTopOf="@+id/enter_schedule"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/friend_requests"
+        app:layout_constraintVertical_bias="0.0" />
 
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="142dp"
-            android:layout_height="wrap_content"
-            android:text="Messages"
-            tools:layout_editor_absoluteX="121dp"
-            tools:layout_editor_absoluteY="119dp" />
-
-        <Button
-            android:id="@+id/button7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Friend Requests"
-            tools:layout_editor_absoluteX="120dp"
-            tools:layout_editor_absoluteY="167dp" />
-
-        <Button
-            android:id="@+id/button8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Enter schedule"
-            tools:layout_editor_absoluteX="123dp"
-            tools:layout_editor_absoluteY="215dp" />
-
-        <Button
-            android:id="@+id/button9"
-            android:layout_width="144dp"
-            android:layout_height="wrap_content"
-            android:text="Other"
-            tools:layout_editor_absoluteX="121dp"
-            tools:layout_editor_absoluteY="263dp" />
-
-
-    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 
 </android.support.constraint.ConstraintLayout>

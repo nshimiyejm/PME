@@ -19,8 +19,6 @@
     <string name="back">Back</string>
     <string name="decline">Decline</string>
     <string name="accept">Accept</string>
-    <string name="accept">Accept</string>
     <string name="ida_may_wants_to_be_your_friend">Ida May wants to be your friend..</string>
-    <string name="decline">Decline</string>
     <string name="jane_doe_wants_to_be_your_friend">Jane Doe wants to be your friend..</string>
 </resources>

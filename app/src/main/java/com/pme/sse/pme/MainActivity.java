@@ -10,71 +10,72 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+    Button registerbtn, login;
+    EditText email, password;
+
+    StudentLocalStorage studentLocalStorage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        final Button login = findViewById(R.id.login);
-        login.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                setContentView(R.layout.home_screen);
 
-                //final Button button = findViewById(R.id.friend_requests);
-               // button.setOnClickListener(new View.OnClickListener() {
-                   // public void onClick(View v) {
+        email = (EditText) findViewById(R.id.email);
+        password = (EditText) findViewById(R.id.password);
 
-                   //     setContentView(R.layout.accept_friend_requests);
-              //      }
-              //  });
-            }
-        });
+        login = (Button) findViewById(R.id.login);
+        registerbtn = (Button) findViewById(R.id.registerbtn);
 
-        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
+        login.setOnClickListener(this);
+        registerbtn.setOnClickListener(this);
 
-    }
+        studentLocalStorage = new StudentLocalStorage(this);
 
-    public void pmelogin(View view){
-        Intent startNewActivity = new Intent(this, DisplayHome.class);
-        startActivity(startNewActivity);
-
-    }
-
-    public void registerSt(View view){
-        Intent startNewActivity = new Intent(this, DisplayRegistration.class);
-        startActivity(startNewActivity);
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+    protected void onStart(){
+        super.onStart();
+        // Authenticate a Student each time the main statrs
+        if (authenticate() == true){
+            startActivity(new Intent(this, DisplayHome.class));
+        }
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    // Display student details from DB
+    public void displayDetails(){
+        // Create lables (TextViews labels) that will hold the vales returned
+        Student student = studentLocalStorage.getLoggedInUser();
+        email.setText(student.email);
+        
+    }
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+    private boolean authenticate(){
+        return studentLocalStorage.getStudentLoggedIn();
+    }
+
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.login:
+                Student student = new Student(null, null);
+
+                //Collect data from the server and validate
+                studentLocalStorage.storeStudentData(student);
+                //If the login is successful
+                studentLocalStorage.setStudentLoggedIn(true);
+
+                break;
+
+                // Calls the registration page
+            case R.id.registerbtn:
+                startActivity(new Intent(this, DisplayRegistration.class));
+                break;
         }
 
-        return super.onOptionsItemSelected(item);
     }
 }

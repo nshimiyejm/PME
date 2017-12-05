@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decline"
+        tools:layout_editor_absoluteX="303dp"
+        tools:layout_editor_absoluteY="41dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="Accept"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="42dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decline"
+        tools:layout_editor_absoluteX="303dp"
+        tools:layout_editor_absoluteY="87dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accept"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="87dp" />
+
+    <EditText
+        android:id="@+id/editText9"
+        android:layout_width="214dp"
+        android:layout_height="38dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Jane Doe wants to be your friend.."
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="35dp" />
+
+    <EditText
+        android:id="@+id/editText10"
+        android:layout_width="215dp"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Ida May wants to be your friend.."
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="83dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="231dp" />
+</android.support.constraint.ConstraintLayout>

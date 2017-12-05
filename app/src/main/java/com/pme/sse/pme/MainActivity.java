@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // Create lables (TextViews labels) that will hold the vales returned
         Student student = studentLocalStorage.getLoggedInUser();
         email.setText(student.email);
-        
+
     }
 
     private boolean authenticate(){

@@ -35,8 +35,8 @@ public class DisplayHome extends AppCompatActivity {
     }
 
     //This method calls the more options activity
-    public void other(View view){
-        Intent startNewActivity = new Intent(this, DisplayMore.class);
+    public void myProfile(View view){
+        Intent startNewActivity = new Intent(this, DisplayProfile.class);
         startActivity(startNewActivity);
 
     }

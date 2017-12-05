@@ -68,9 +68,9 @@
             android:id="@+id/btn_more"
             android:layout_width="144dp"
             android:layout_height="wrap_content"
-            android:text="More"
+            android:text="My Profile"
             android:layout_gravity="center"
-            android:onClick="other"
+            android:onClick="myProfile"
 
             app:layout_constraintTop_toBottomOf="@+id/btn_request"
             />

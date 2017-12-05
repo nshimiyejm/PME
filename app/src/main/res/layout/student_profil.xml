@@ -67,7 +67,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="76dp"
-                    android:text="Charlotte"
+                    android:text="Billy Joe"
                     android:textColor="#fff"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -103,7 +103,8 @@
 
                     android:elevation="4dp"
                     android:padding="20dp"
-                    android:text="Yes\nNo\nMaybe\nthink"
+                    android:text="Course: Intro to Information Tech
+                                  \nSection: CSCI 1100 - 032"
 
                     />
 

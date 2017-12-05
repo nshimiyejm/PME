@@ -10,7 +10,7 @@ public class DisplayHome extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_display_home);
+        setContentView(R.layout.home_screen);
     }
 
     //This method calls the message activity

@@ -24,13 +24,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setContentView(R.layout.home_screen);
 
-                final Button button = findViewById(R.id.friend_requests);
-                button.setOnClickListener(new View.OnClickListener() {
-                    public void onClick(View v) {
+                //final Button button = findViewById(R.id.friend_requests);
+               // button.setOnClickListener(new View.OnClickListener() {
+                   // public void onClick(View v) {
 
-                        setContentView(R.layout.accept_friend_requests);
-                    }
-                });
+                   //     setContentView(R.layout.accept_friend_requests);
+              //      }
+              //  });
             }
         });
 
@@ -49,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
         Intent startNewActivity = new Intent(this, DisplayHome.class);
         startActivity(startNewActivity);
 
+    }
+
+    public void registerSt(View view){
+        Intent startNewActivity = new Intent(this, DisplayRegistration.class);
+        startActivity(startNewActivity);
     }
 
     @Override

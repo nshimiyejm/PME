@@ -46,7 +46,9 @@
 
         <activity
             android:name=".DisplayWalkingR"
-            android:label="@string/title_activity_display_walking_r"></activity>
+            android:label="@string/title_activity_display_walking_r" />
+        <activity android:name=".DisplayRegistration" />
+        <activity android:name=".DisplayAccepRequest"></activity>
     </application>
 
 </manifest>

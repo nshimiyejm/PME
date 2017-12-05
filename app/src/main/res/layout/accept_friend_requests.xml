@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -8,63 +9,91 @@
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="33dp"
+        android:layout_marginBottom="13dp"
+        android:layout_marginEnd="4dp"
         android:text="Decline"
-        tools:layout_editor_absoluteX="303dp"
-        tools:layout_editor_absoluteY="41dp" />
+        app:layout_constraintBottom_toTopOf="@+id/checkBox3"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <CheckBox
         android:id="@+id/checkBox2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="4dp"
         android:checked="false"
         android:text="Accept"
-        tools:layout_editor_absoluteX="226dp"
-        tools:layout_editor_absoluteY="42dp" />
+        app:layout_constraintBottom_toTopOf="@+id/checkBox4"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox"
+        app:layout_constraintStart_toEndOf="@+id/editText9" />
 
     <CheckBox
         android:id="@+id/checkBox3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="392dp"
+        android:layout_marginEnd="4dp"
         android:text="Decline"
-        tools:layout_editor_absoluteX="303dp"
-        tools:layout_editor_absoluteY="87dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <CheckBox
         android:id="@+id/checkBox4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="392dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="4dp"
         android:text="Accept"
-        tools:layout_editor_absoluteX="226dp"
-        tools:layout_editor_absoluteY="87dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox3"
+        app:layout_constraintStart_toEndOf="@+id/editText10" />
 
     <EditText
         android:id="@+id/editText9"
         android:layout_width="214dp"
         android:layout_height="38dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="35dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Jane Doe wants to be your friend.."
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="35dp" />
+        app:layout_constraintBottom_toTopOf="@+id/editText10"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText10"
         android:layout_width="215dp"
         android:layout_height="36dp"
+        android:layout_marginBottom="147dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Ida May wants to be your friend.."
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="83dp" />
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText9" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="232dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginStart="148dp"
         android:text="Back"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="231dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

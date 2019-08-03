@@ -32,24 +32,29 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/profile_icon"
                 />
+
             <RelativeLayout
                 android:id="@+id/profile_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
                 android:layout_below="@+id/header_cover_image"
                 android:background="#ebca0707"
                 android:elevation="4dp"
                 android:paddingBottom="24dp">
 
 
-                <ImageView
+                <Button
                     android:id="@+id/add_friend"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/notifications"
+                    android:onClick="acceptFreind"
                     android:layout_alignParentTop="true"
                     android:layout_toLeftOf="@+id/drop_down_option_menu"
                     android:layout_toStartOf="@+id/drop_down_option_menu"
-                    android:src="@drawable/profile_add" />
+                    android:src="@drawable/notifications" />
 
                 <ImageView
                     android:id="@+id/drop_down_option_menu"
@@ -67,7 +72,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="76dp"
-                    android:text="Jean Paul"
+                    android:text="Billy Joe"
                     android:textColor="#fff"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -97,10 +102,14 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:background="#fff"
+                    android:lines="4"
+                    android:singleLine="false"
                     android:clickable="true"
+
                     android:elevation="4dp"
                     android:padding="20dp"
-                    android:text="Intro To Information Technology"
+                    android:text="Course: Intro to Information Tech
+                                  \nSection: CSCI 1100 - 032"
 
                     />
 
@@ -117,6 +126,18 @@
                     android:padding="20dp"
                     android:text="Android Profile XMl UI Design" />
 
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="#fff"
+                    android:clickable="true"
+                    android:elevation="4dp"
+                    android:padding="20dp"
+                    android:text="Android Profile UI Design" />
+
+
                 <TextView
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
@@ -149,7 +170,7 @@
                     android:padding="20dp"
                     android:text="Android Profile UI Design" />
 
-                
+
 
             </LinearLayout>
         </RelativeLayout>

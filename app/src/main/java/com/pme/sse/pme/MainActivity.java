@@ -1,5 +1,6 @@
 package com.pme.sse.pme;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,14 +10,35 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+
+import android.widget.EditText;
+
 import android.widget.ImageButton;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+    Button registerbtn, login;
+    EditText email, password;
+
+    StudentLocalStorage studentLocalStorage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        email = (EditText) findViewById(R.id.email);
+        password = (EditText) findViewById(R.id.password);
+
+        login = (Button) findViewById(R.id.login);
+        registerbtn = (Button) findViewById(R.id.registerbtn);
+
+        login.setOnClickListener(this);
+        registerbtn.setOnClickListener(this);
+
+        studentLocalStorage = new StudentLocalStorage(this);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         final Button login = findViewById(R.id.login);
@@ -70,27 +92,49 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });*/
+
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+    protected void onStart(){
+        super.onStart();
+        // Authenticate a Student each time the main statrs
+        if (authenticate() == true){
+            startActivity(new Intent(this, DisplayHome.class));
+        }
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    // Display student details from DB
+    public void displayDetails(){
+        // Create lables (TextViews labels) that will hold the vales returned
+        Student student = studentLocalStorage.getLoggedInUser();
+        email.setText(student.email);
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+    }
+
+    private boolean authenticate(){
+        return studentLocalStorage.getStudentLoggedIn();
+    }
+
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.login:
+                Student student = new Student(null, null);
+
+                //Collect data from the server and validate
+                studentLocalStorage.storeStudentData(student);
+                //If the login is successful
+                studentLocalStorage.setStudentLoggedIn(true);
+
+                break;
+
+                // Calls the registration page
+            case R.id.registerbtn:
+                startActivity(new Intent(this, DisplayRegistration.class));
+                break;
         }
 
-        return super.onOptionsItemSelected(item);
     }
 }
